@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click — Hábitos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Martian+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="day-plate" class="day-plate">
+    <div class="day-plate-top">
+      <span class="wordmark">Click</span>
+      <div class="shutter-wrap">
+        <div id="shutter" class="shutter"></div>
+        <span id="shutter-count" class="shutter-count">0 of 0 done today</span>
+      </div>
+    </div>
+    <div id="date-line" class="date-line"></div>
+  </header>
+
+  <main class="page">
+    <form id="add-form" class="add-bar" autocomplete="off">
+      <input id="add-input" class="add-input" type="text" placeholder="Name a habit" maxlength="80" required />
+      <button type="submit" class="add-btn">Add habit</button>
+    </form>
+
+    <ul id="habit-list" class="habit-list"></ul>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <div class="ghost-row">
+        <div class="plunger" aria-hidden="true"><div class="plunger-knurl"></div></div>
+        <div class="ghost-body">
+          <div class="ghost-name"></div>
+          <div class="ghost-ruler"></div>
+        </div>
+        <div class="odometer" aria-hidden="true">
+          <div class="drum"><div class="strip"><span>0</span></div></div>
+          <div class="drum"><div class="strip"><span>0</span></div></div>
+        </div>
+      </div>
+      <p class="empty-text">Nothing to count yet. Name your first habit above.</p>
+    </div>
+
+    <div id="error-state" class="error-state" hidden>
+      <p>Couldn't reach the server. Check that it's running on port 3000.</p>
+      <button id="retry-btn" class="retry-btn" type="button">Try again</button>
+    </div>
+  </main>
+
+  <div id="live-region" class="sr-only" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "public/style.css"
+        ],
+        "createdAt": "2026-09-19T23:58:32.866Z",
+        "reason": "both flags are functional state indicators (hover affordance, failed-write error border) per Opus design spec, not decorative card accents"
+      }
+    ]
+  }
+}

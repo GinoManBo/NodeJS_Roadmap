@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument sans",
+        "createdAt": "2026-09-20T05:43:51.315Z",
+        "reason": "Opus design spec: deliberate Martian Mono + Instrument Sans pairing to differentiate from Tasks project's Archivo"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "public/style.css"
+        ],
+        "createdAt": "2026-09-20T05:43:51.516Z",
+        "reason": "border-left on .habit-row.failed is a functional failed-save indicator, not a decorative card accent (same pattern approved in Tasks project)"
+      }
+    ]
+  }
+}
