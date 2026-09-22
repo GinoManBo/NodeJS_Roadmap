@@ -6,16 +6,13 @@ app.use(express.json());
 let habits = [];
 let nextId = 1;
 
-// Hay que hacer una comparación del lastcheck y hoy
-function comparison(lastcheck) {//lastcheck = habit.lastCheckIn;
+// funcion comparativa de best
+function aumento(habit) {
 
-  const today = new Date().substring(0, 10);
-  const lastcheck = lastcheck.substring(0, 10);
-
+  habit.streak = habit.streak + 1;
 
 
 }
-
 /*
 {
   id: number,
@@ -27,6 +24,26 @@ function comparison(lastcheck) {//lastcheck = habit.lastCheckIn;
 }
 */
 
+// Hay que hacer una comparación del lastcheck y hoy
+function comparison(habit) {//lastcheck = habit.lastCheckIn;
+
+  const today = new Date().substring(0, 10);
+
+  if (!habit.lastCheckIn) {
+    habit.lastCheckIn = today;
+    habit.checkins.push(today);
+    return res.status(201).json(habit);
+
+  } else if (today - lastcheck === 1) {
+
+    habit.lastCheckIn = today;
+    habit.checkins.push(today);
+    return res.status(200).json(habit);
+  }
+
+}
+
+
 
 app.get("/api/habits", (req, res) => {
 
@@ -35,8 +52,6 @@ app.get("/api/habits", (req, res) => {
 });
 
 app.post("/api/habits", (req, res) => {
-  const id = Number(req.params.id);
-
   const { name } = req.body;
 
   if (!name || !name.trim()) {
@@ -75,7 +90,7 @@ app.post("/api/habits/:id/checkin", (req, res) => {
     ])
   }
 
-  const interval = comparison(habit.lastCheckIn);
+  return comparison(habit);
 
 
 });
