@@ -5,7 +5,6 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "tag:#visto",
@@ -43,16 +42,12 @@
       }
     }
   ],
-  "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
   "centerStrength": 0.5,
   "repelStrength": 12,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.29048676585605737,
-  "close": true
+  "linkDistance": 250
 }

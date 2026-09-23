@@ -8,7 +8,7 @@ tags:
 - 🟢 [[Convenciones de rutas REST]] — Visto
 - 🟢 [[Validación manual de entrada]] — Visto
 - 🟢 [[Contrato de API frontend backend]] — Visto
-- 🟡 [[Lógica de negocio (rachas y fechas)]] — En progreso
-- 🔴 [[Idempotencia]] — Pendiente
+- 🟢 [[Lógica de negocio (rachas y fechas)]] — Visto
+- 🟢 [[Idempotencia]] — Visto
 - 🔴 [[Paginación filtrado y orden]] — Pendiente
 - 🔴 [[Versionado y documentación (OpenAPI)]] — Pendiente

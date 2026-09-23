@@ -1,16 +1,19 @@
 ---
 tags:
-  - pendiente
+  - visto
 area: "04 Diseño de APIs REST"
-estado: pendiente
+estado: visto
+modulos:
+  - "M2 - Habits"
 ---
 # Idempotencia
 
-**Estado:** 🔴 Pendiente  
+**Estado:** 🟢 Visto  
 **Área:** [[04 Diseño de APIs REST]]
 
 Repetir la misma petición no debe cambiar el resultado.
 
-## Qué aprender
-- Check-in dos veces el mismo día
-- PUT vs POST
+## Vistos en
+
+### [[M2 - Habits]]
+- Segundo check-in mismo día devuelve `409 Conflict`, no duplica racha

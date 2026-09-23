@@ -6,4 +6,4 @@ tags:
 
 - 🟢 [[nodemon]] — Visto
 - 🟢 [[Organización de proyectos en carpetas]] — Visto
-- 🔴 [[Git y GitHub]] — Pendiente
+- 🟡 [[Git y GitHub]] — En progreso

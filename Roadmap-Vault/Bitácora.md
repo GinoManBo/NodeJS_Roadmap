@@ -46,7 +46,7 @@ Primer sandbox completo: app de tareas. Frontend 'Sheet' armado por Claude, back
 - [[Servir un frontend estático]]
 - [[Consumir la API desde fetch]]
 
-## 2026-09-20 en adelante — [[M2 - Habits]]
+## 2026-09-20 a 2026-09-23 — [[M2 - Habits]]
 Segundo sandbox: habit tracker 'Click' (odómetro de racha, regla y plunger). Frontend listo, backend en progreso.
 
 - [[npm y package.json]]
@@ -62,9 +62,11 @@ Segundo sandbox: habit tracker 'Click' (odómetro de racha, regla y plunger). Fr
 - [[Validación manual de entrada]]
 - [[Contrato de API frontend backend]]
 - [[Lógica de negocio (rachas y fechas)]]
+- [[Idempotencia]]
 - [[Datos en memoria (arrays)]]
 - [[nodemon]]
 - [[Organización de proyectos en carpetas]]
+- [[Git y GitHub]]
 - [[Servir un frontend estático]]
 - [[Consumir la API desde fetch]]
 

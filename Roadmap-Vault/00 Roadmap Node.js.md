@@ -6,12 +6,12 @@ tags:
 
 Leyenda: 🟢 visto · 🟡 en progreso · 🔴 pendiente
 
-**Progreso:** 26 vistos, 1 en progreso, 56 pendientes de 83 nodos (~32%).
+**Progreso:** 28 vistos, 1 en progreso, 54 pendientes de 83 nodos (~34%).
 
 ## Módulos (trazabilidad)
 - 🟢 [[M0 - Inicio (http y usuarios)]] — 2026-09-07 a 2026-09-08
 - 🟢 [[M1 - Tasks]] — 2026-09-19 a 2026-09-20
-- 🟡 [[M2 - Habits]] — 2026-09-20 en adelante
+- 🟡 [[M2 - Habits]] — 2026-09-20 a 2026-09-23
 
 Abrir la vista de grafo: los nodos verdes son temas vistos, amarillos en progreso, rojos pendientes, azules módulos, grises áreas.
 
@@ -50,13 +50,13 @@ Abrir la vista de grafo: los nodos verdes son temas vistos, amarillos en progres
 - 🔴 [[Manejo global de errores en Express]]
 - 🔴 [[Motores de plantillas]]
 
-### [[04 Diseño de APIs REST]] (4/8 vistos, 1 en progreso)
+### [[04 Diseño de APIs REST]] (6/8 vistos)
 - 🟢 [[CRUD completo]]
 - 🟢 [[Convenciones de rutas REST]]
 - 🟢 [[Validación manual de entrada]]
 - 🟢 [[Contrato de API frontend backend]]
-- 🟡 [[Lógica de negocio (rachas y fechas)]]
-- 🔴 [[Idempotencia]]
+- 🟢 [[Lógica de negocio (rachas y fechas)]]
+- 🟢 [[Idempotencia]]
 - 🔴 [[Paginación filtrado y orden]]
 - 🔴 [[Versionado y documentación (OpenAPI)]]
 
@@ -91,10 +91,10 @@ Abrir la vista de grafo: los nodos verdes son temas vistos, amarillos en progres
 - 🔴 [[Debugging con inspector]]
 - 🔴 [[Linting y formato]]
 
-### [[08 Herramientas y flujo]] (2/3 vistos)
+### [[08 Herramientas y flujo]] (2/3 vistos, 1 en progreso)
 - 🟢 [[nodemon]]
 - 🟢 [[Organización de proyectos en carpetas]]
-- 🔴 [[Git y GitHub]]
+- 🟡 [[Git y GitHub]]
 
 ### [[09 Arquitectura]] (0/4 vistos)
 - 🔴 [[Estructura por capas (rutas controladores servicios)]]
