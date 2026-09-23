@@ -329,24 +329,26 @@ body {
 
 .tick {
   width: 3px;
-  height: 4px;
+  height: 18px; /* fixed box; visual height comes from scaleY below */
   border-radius: 1px;
   background: var(--text-faint);
   flex-shrink: 0;
-  transition: background 400ms ease, height 220ms cubic-bezier(.2,.9,.3,1.2);
+  transform-origin: bottom;
+  transform: scaleY(0.2222); /* 4/18 */
+  transition: background 400ms ease, transform 220ms cubic-bezier(.2,.9,.3,1.2);
   align-self: flex-end;
 }
 
-.tick.week-marker { height: 18px; }
-.tick.done { height: 14px; background: var(--text); }
-.tick.done.week-marker { height: 18px; }
+.tick.week-marker { transform: scaleY(1); }
+.tick.done { transform: scaleY(0.7778); background: var(--text); } /* 14/18 */
+.tick.done.week-marker { transform: scaleY(1); }
 .tick.today-open {
-  height: 14px;
+  transform: scaleY(0.7778);
   background: transparent;
   outline: 1px solid var(--text-dim);
   animation: tick-pulse 2.4s ease-in-out infinite;
 }
-.tick.today-done { height: 14px; background: var(--signal); }
+.tick.today-done { transform: scaleY(0.7778); background: var(--signal); }
 
 .ruler-caption {
   font-size: 11px;
@@ -385,6 +387,7 @@ body {
 .strip {
   display: flex;
   flex-direction: column;
+  font-size: 34px; /* must match .strip span's height/line-height so translateY(Nem) lines up */
   transition: transform 380ms cubic-bezier(.22,1.2,.36,1);
 }
 

@@ -6,13 +6,24 @@ app.use(express.json());
 let habits = [];
 let nextId = 1;
 
-// funcion comparativa de best
-function aumento(habit) {
+function ItWasYesterday(habit) {
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayDate = yesterday.toISOString().substring(0, 10);
+  
+  const today = new Date().toISOString().substring(0, 10);
 
-  habit.streak = habit.streak + 1;
+  const LastCheck = habit.lastCheckIn;
 
-
+  if (LastCheck === yesterdayDate) {
+    return true;
+  } else if (LastCheck === today) {
+    return 2;
+  } else {
+    return false
+  } 
 }
+
 /*
 {
   id: number,
@@ -25,26 +36,39 @@ function aumento(habit) {
 */
 
 // Hay que hacer una comparación del lastcheck y hoy
-function comparison(habit) {//lastcheck = habit.lastCheckIn;
+function comparison(habit, res) {//lastcheck = habit.lastCheckIn;
 
-  const today = new Date().substring(0, 10);
+  const today = new Date().toISOString().substring(0, 10);
 
-  if (!habit.lastCheckIn) {
+  const ultimoCheck = ItWasYesterday(habit);
+
+  if (ultimoCheck === true) { // ItWasYesterday returns true
+    habit.streak++;
     habit.lastCheckIn = today;
     habit.checkins.push(today);
-    return res.status(201).json(habit);
 
-  } else if (today - lastcheck === 1) {
+    if (habit.streak > habit.best) {
+      habit.best = habit.streak;
+    }
 
+    return res.status(200).json(habit);
+  } else if (ultimoCheck === 2) { // ItWasYesterday returns 2
+    return res.status(409).json({
+      message: "Last Checkin was today, you cant check twice in a day."
+    })
+  } else { // ItWasYesterday returns false
+    habit.streak = 1;
     habit.lastCheckIn = today;
     habit.checkins.push(today);
+
+    if (habit.streak > habit.best) {
+      habit.best = habit.streak;
+    }
+
     return res.status(200).json(habit);
   }
 
 }
-
-
-
 app.get("/api/habits", (req, res) => {
 
   return res.json(habits);
@@ -90,9 +114,7 @@ app.post("/api/habits/:id/checkin", (req, res) => {
     ])
   }
 
-  return comparison(habit);
-
-
+  return comparison(habit, res);
 });
 
 app.listen(3000, () => {
